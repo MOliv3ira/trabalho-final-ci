@@ -21,17 +21,19 @@ jobs:
           node-version: 22.x
 
       # Intalação do Mocha
-      - name: instalar Mocha
-        run: npm install mocha
+      - name: instalar Mocha e mochawesome
+        run: |
+          npm install mocha
+          npm install mochawesome
 
       # Run the tests
-      - name: Run tests
-        run: npx mocha tests/trabalho-final.js
+      - name: Run tests and generate HTML report
+        run: npx mocha tests/trabalho-final.js --reporter mochawesome --reporter-options reportDir=tests,reportFilename=results
 
       # Upload the results
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: tests/results.html      
+          path: tests/results.html
 
