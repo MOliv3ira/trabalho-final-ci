@@ -12,11 +12,11 @@ jobs:
     steps:
       #clone the repository
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # install node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 22.x
 
@@ -31,7 +31,7 @@ jobs:
       # Upload the results
       - name: Upload test results
         if: ${{ !cancelled() }}
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: test-results
 
