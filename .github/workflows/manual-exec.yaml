@@ -26,14 +26,15 @@ jobs:
           npm install mocha
           npm install mochawesome
 
-      # Run the tests
       - name: Run tests and generate HTML report
         run: npx mocha tests/trabalho-final.js --reporter mochawesome --reporter-options reportDir=tests,reportFilename=results
 
-      # Upload the results
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
           name: test-results
           path: tests/results.html
+
+      - name: Exibir instrução para visualização do artefato
+        run: echo "Após a execução, acesse a aba 'Actions' do GitHub, selecione o workflow executado e faça o download do artefato 'test-results' para visualizar o relatório HTML dos testes."
 

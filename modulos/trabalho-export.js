@@ -15,7 +15,7 @@ function verificarSePodeSerAdotado(idade, porte) {
 
 function calcularConsumoDeRacao(nome, idade, peso){
   
-  const gramasPorDia = peso * 30 
+  const gramasPorDia = peso * 300 
 
   return gramasPorDia
 }
