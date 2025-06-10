@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="Testes da disciplina - fundamentos JS" tests="5" failures="0" errors="0" skipped="0">
+  <testcase classname="Testes da disciplina - fundamentos JS" name="QUANDO informar um nome para o Pet, DEVE ser impresso na tag com letras maiúsculas"/>
+  <testcase classname="Testes da disciplina - fundamentos JS" name="QUANDO a idade = 1 + porte M, DEVE ser permitida a adoção"/>
+  <testcase classname="Testes da disciplina - fundamentos JS" name="QUANDO o peso = 14.5, DEVE ser retornado 4350 gramas para o consumo diário"/>
+  <testcase classname="Testes da disciplina - fundamentos JS" name="QUANDO o porte = pequeno, DEVE ser retornada a atividade adequada"/>
+  <testcase classname="Testes da disciplina - fundamentos JS" name="QUANDO buscar dado de exemplo, DEVE retornar um valor de forma assíncrona"/>
+</testsuite>
