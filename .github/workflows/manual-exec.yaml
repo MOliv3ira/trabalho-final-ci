@@ -20,21 +20,10 @@ jobs:
         with:
           node-version: 22.x
 
-      # Intalação do Mocha
-      - name: instalar Mocha e mochawesome
-        run: |
-          npm install mocha
-          npm install mochawesome
+      # Install mocha
+      - name: instalar Mocha
+        run: npm install mocha
 
-      - name: Run tests and generate HTML report
-        run: npx mocha tests/trabalho-final.js --reporter mochawesome --reporter-options reportDir=tests,reportFilename=results
-
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: tests/
-
-      - name: Exibir instrução para visualização do artefato
-        run: echo "Após a execução, acesse a aba 'Actions' do GitHub, selecione o workflow executado e faça o download do artefato 'test-results' para visualizar o relatório HTML dos testes."
-
+      # Run the tests
+      - name: Run tests
+        run: npx mocha tests/trabalho-final.js
