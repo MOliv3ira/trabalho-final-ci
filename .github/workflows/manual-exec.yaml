@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: tests/results.html
+          path: tests/
 
       - name: Exibir instrução para visualização do artefato
         run: echo "Após a execução, acesse a aba 'Actions' do GitHub, selecione o workflow executado e faça o download do artefato 'test-results' para visualizar o relatório HTML dos testes."
